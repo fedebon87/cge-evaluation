@@ -18,10 +18,12 @@ https://ratings.fide.com/
 I dati così ottenuti sono già strutturati, con l'identicativo del cognome e nome del giocatore, con attributi la posizione in classifica,
 il punteggio Elo, la nazionalità e l'anno di nascita.
 
-Si trovano poi i dataset di tutte le partite ufficiali dei maggiori giocatori, in formato non strutturato.
-Constano di stringhe che descrivono le mosse delle partite. Si può ricostruire da ogni partita la configurazione dei pezzi a ogni singola
-mossa e isolare quelle con meno di 8 pezzi nel finale. Diviene possibile confrontare l'esito della partita con l'esito teorico e valutare
-le abilità dei giocatori.
+Si trovano poi i dataset di tutte le partite ufficiali dei maggiori giocatori, sia in formato strutturato che non strutturato.
+Nel caso strutturato, gli identificativi sono i nomi delle partite (giocatori e torneo) e gli attributi constano una stringa che descrive
+le mosse delle partite e di una stringa per l'esito della partita. Si può ricostruire da ogni partita la configurazione dei pezzi a ogni
+singola mossa e isolare quelle con meno di 8 pezzi nel finale. Diviene possibile confrontare l'esito della partita con l'esito teorico e
+valutare le abilità dei giocatori.
+Nel caso non strutturato, è possibile raccogliere le immagini delle configurazioni dei finali di ogni partita.
 
 A titolo di esempio:
 per Magnus Carlsen https://www.pgnmentor.com/players/Carlsen.zip ;
