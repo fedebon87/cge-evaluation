@@ -1,0 +1,42 @@
+Il gioco degli scacchi è totalmente risolto se sono rimasti sulla scacchiera meno di 8 pezzi, ovvero si può conoscere a priori
+il risultato di una partita che arrivi a una qualsiasi configurazione con meno di 8 pezzi. Si vuole indagare se i migliori giocatori,
+che spesso invece che giocare fino allo scacco matto decidono di concedere la vittoria o proporre una patta, hanno una ottima intuizione
+e/o conoscenza di questi finali e se il ranking ufficiale ELO sia predittivo rispetto a questa loro capacità. Si può affinare l'analisi
+considerando il punteggio ELO massimo raggiunto in carriera, o stimato per i giocatori in attività prima del 1970, oppure il punteggio ELO
+assegnato nel mese successivo a quello della partita considerata.
+
+Esistono dei dataset strutturati che descrivono completamente questi finali. A seguire i link a una versione open source - i file
+di estensione .rtbw :
+- dai 3 ai 5 pezzi: https://tablebase.lichess.ovh/tables/standard/3-4-5/
+- 6 pezzi: https://tablebase.lichess.ovh/tables/standard/6-wdl/
+- 7 pezzi: https://tablebase.lichess.ovh/tables/standard/7/
+
+Questi dataset sono organizzati con un identificativo della posizione detto FEN e un attributo che descrive l'esito finale.
+
+Il dataset dei punteggi ELO è ricavabile attraverso la funzione di ricerca dal sito ufficiale della FIDE alla pagina:
+https://ratings.fide.com/
+I dati così ottenuti sono già strutturati, con l'identicativo del cognome e nome del giocatore, con attributi la posizione in classifica, il punteggio
+Elo, la nazionalità e l'anno di nascita.
+
+Si trovano poi i dataset di tutte le partite ufficiali dei maggiori giocatori, in formato non strutturato.
+Constano di stringhe che descrivono le mosse delle partite. Si può ricostruire da ogni partita la configurazione dei pezzi a ogni singola
+mossa e isolare quelle con meno di 8 pezzi nel finale. Diviene possibile confrontare l'esito della partita con l'esito teorico e valutare
+le abilità dei giocatori.
+
+A titolo di esempio:
+per Magnus Carlsen https://www.pgnmentor.com/players/Carlsen.zip ;
+per Garry Kasparov https://www.pgnmentor.com/players/Kasparov.zip .
+Nello stesso sito si trovano le partite di tutti i maggiori giocatori.
+
+La ricerca si può estendere poi a partite di giocatori non titolati per vedere in quanti casi un finale a 7 pezzi vincente si trasformi
+in un finale perdente a meno pezzi e se i sistemi di ranking delle maggiori piattaforme di gioco siano predittori di qualità comparabile
+al sistema di rating ELO.
+
+Si possono trovare database di partite nelle maggiori piattaforme, che hanno come identificativo gli username degli utenti e come attributi
+i rating dei due giocatori, l'elenco delle mosse, l'esito, i timestamps delle mosse, la valutazione del computer.
+Un esempio al link: https://database.lichess.org/
+Benché siano strutturati, l'analisi su questi database va svolta in modo simile a quelli non strutturati, perché è necessario analizzare i
+finali delle singole partite attraverso l'elenco delle mosse per poi valutare le abilità dei giocatori e compararle con il loro rating al tempo
+di quella partita.
+La piattaforma chess.com mostra le partite in maniera interattiva: ricercando i nomi utente si può costruire un database non strutturato che
+raccoglie le immagini dei finali di partita da quando rimangono 7 pezzi sulla scacchiera.
