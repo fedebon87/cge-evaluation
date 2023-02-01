@@ -15,8 +15,8 @@ Questi dataset sono organizzati con un identificativo della posizione detto FEN 
 
 Il dataset dei punteggi ELO è ricavabile attraverso la funzione di ricerca dal sito ufficiale della FIDE alla pagina:
 https://ratings.fide.com/
-I dati così ottenuti sono già strutturati, con l'identicativo del cognome e nome del giocatore, con attributi la posizione in classifica, il punteggio
-Elo, la nazionalità e l'anno di nascita.
+I dati così ottenuti sono già strutturati, con l'identicativo del cognome e nome del giocatore, con attributi la posizione in classifica,
+il punteggio Elo, la nazionalità e l'anno di nascita.
 
 Si trovano poi i dataset di tutte le partite ufficiali dei maggiori giocatori, in formato non strutturato.
 Constano di stringhe che descrivono le mosse delle partite. Si può ricostruire da ogni partita la configurazione dei pezzi a ogni singola
